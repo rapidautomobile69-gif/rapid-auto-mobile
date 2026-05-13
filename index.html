@@ -1,206 +1,457 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rapid’Auto Mobile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rapid’Auto Mobile</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+<style>
 
-    body{
-      background:#050505;
-      color:white;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
-    header{
-      background:linear-gradient(135deg,#000,#111);
-      padding:60px 20px;
-      text-align:center;
-      border-bottom:2px solid #ffb800;
-    }
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
 
-    header h1{
-      font-size:55px;
-      color:#ffb800;
-      margin-bottom:10px;
-    }
+header{
+min-height:100vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-    header p{
-      font-size:22px;
-      color:#ddd;
-      margin-bottom:30px;
-    }
+.hero{
+max-width:900px;
+animation:fade 1.5s ease;
+}
 
-    .btn{
-      display:inline-block;
-      padding:15px 30px;
-      background:#ffb800;
-      color:black;
-      text-decoration:none;
-      border-radius:12px;
-      font-weight:bold;
-      margin:10px;
-    }
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
 
-    .section{
-      padding:50px 20px;
-      max-width:1200px;
-      margin:auto;
-    }
+h1{
+font-size:70px;
+color:#ffb800;
+margin-bottom:20px;
+}
 
-    .title{
-      font-size:38px;
-      color:#ffb800;
-      margin-bottom:30px;
-      text-align:center;
-    }
+.hero p{
+font-size:24px;
+margin-bottom:40px;
+color:#ddd;
+}
 
-    .services{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#ffb800;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:15px;
+margin:10px;
+transition:0.3s;
+}
 
-    .card{
-      background:#111;
-      border:1px solid #222;
-      border-radius:20px;
-      padding:25px;
-      transition:0.3s;
-    }
+.btn:hover{
+transform:scale(1.05);
+background:white;
+}
 
-    .card:hover{
-      border-color:#ffb800;
-      transform:translateY(-5px);
-    }
+section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
 
-    .card h3{
-      color:#ffb800;
-      margin-bottom:15px;
-    }
+.title{
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+color:#ffb800;
+}
 
-    .contact{
-      background:#111;
-      border-radius:20px;
-      padding:30px;
-      text-align:center;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
-    .contact p{
-      margin:10px 0;
-      font-size:18px;
-    }
+.card{
+background:#111;
+padding:30px;
+border-radius:25px;
+border:1px solid #222;
+transition:0.3s;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      border-top:1px solid #222;
-      color:#999;
-      margin-top:50px;
-    }
-  </style>
+.card:hover{
+transform:translateY(-10px);
+border-color:#ffb800;
+}
+
+.card h3{
+margin-bottom:15px;
+color:#ffb800;
+}
+
+form{
+display:grid;
+gap:20px;
+}
+
+input,textarea,select{
+padding:15px;
+border:none;
+border-radius:12px;
+background:#111;
+color:white;
+border:1px solid #222;
+}
+
+textarea{
+height:150px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+}
+
+.review{
+background:#111;
+padding:25px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.review strong{
+color:#ffb800;
+}
+
+.contact{
+text-align:center;
+background:#111;
+padding:50px;
+border-radius:30px;
+}
+
+iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:25px;
+margin-top:30px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid #222;
+color:#999;
+margin-top:60px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:18px;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+z-index:999;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:20px;
+z-index:999;
+border-bottom:1px solid #222;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ffb800;
+}
+
+</style>
 </head>
 
 <body>
 
+<nav>
+<a href="#services">Prestations</a>
+<a href="#tarifs">Tarifs</a>
+<a href="#reservation">Réservation</a>
+<a href="#devis">Devis</a>
+<a href="#avis">Avis</a>
+<a href="#contact">Contact</a>
+</nav>
+
 <header>
-  <h1>RAPID’AUTO MOBILE</h1>
-  <p>Le garage vient à vous 🚗</p>
 
-  <a class="btn" href="tel:0687993486">📞 Appeler</a>
+<div class="hero">
 
-  <a class="btn" href="https://wa.me/33687993486">
-    WhatsApp
-  </a>
+<h1>RAPID’AUTO MOBILE</h1>
+
+<p>
+Le garage vient à vous 🚗<br>
+Entretien & réparation automobile à domicile
+</p>
+
+<a class="btn" href="tel:0687993486">
+📞 Appeler
+</a>
+
+<a class="btn" href="https://wa.me/33687993486">
+WhatsApp
+</a>
+
+</div>
+
 </header>
 
-<section class="section">
-  <h2 class="title">NOS PRESTATIONS</h2>
+<section id="services">
 
-  <div class="services">
+<h2 class="title">NOS PRESTATIONS</h2>
 
-    <div class="card">
-      <h3>🔧 Vidange</h3>
-      <p>Vidange huile + filtre directement à domicile.</p>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <h3>🛞 Plaquettes de frein</h3>
-      <p>Remplacement rapide et sécurisé.</p>
-    </div>
+<div class="card">
+<h3>🔧 Vidange</h3>
+<p>Vidange complète huile + filtre à domicile.</p>
+</div>
 
-    <div class="card">
-      <h3>💻 Diagnostic électronique</h3>
-      <p>Passage valise et diagnostic complet.</p>
-    </div>
+<div class="card">
+<h3>💻 Diagnostic</h3>
+<p>Passage valise diagnostic électronique.</p>
+</div>
 
-    <div class="card">
-      <h3>🧼 Nettoyage intérieur</h3>
-      <p>Nettoyage professionnel du véhicule.</p>
-    </div>
+<div class="card">
+<h3>🛞 Plaquettes frein</h3>
+<p>Remplacement rapide et sécurisé.</p>
+</div>
 
-    <div class="card">
-      <h3>⚙️ Entretien général</h3>
-      <p>Contrôles et entretien automobile.</p>
-    </div>
+<div class="card">
+<h3>🧼 Nettoyage intérieur</h3>
+<p>Nettoyage professionnel du véhicule.</p>
+</div>
 
-    <div class="card">
-      <h3>🚗 Déplacement rapide</h3>
-      <p>Intervention à Villefranche et alentours.</p>
-    </div>
+<div class="card">
+<h3>⚙️ Entretien général</h3>
+<p>Entretien complet et contrôles sécurité.</p>
+</div>
 
-  </div>
+<div class="card">
+<h3>🚗 Déplacement rapide</h3>
+<p>Villefranche et alentours jusqu’à 20 km.</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-  <h2 class="title">TARIFS</h2>
+<section id="tarifs">
 
-  <div class="services">
+<h2 class="title">TARIFS</h2>
 
-    <div class="card">
-      <h3>Vidange</h3>
-      <p>À partir de 45€</p>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <h3>Diagnostic</h3>
-      <p>À partir de 50€</p>
-    </div>
+<div class="card">
+<h3>Vidange</h3>
+<p>À partir de 45€</p>
+</div>
 
-    <div class="card">
-      <h3>Plaquettes frein</h3>
-      <p>À partir de 80€</p>
-    </div>
+<div class="card">
+<h3>Diagnostic</h3>
+<p>À partir de 50€</p>
+</div>
 
-  </div>
+<div class="card">
+<h3>Plaquettes</h3>
+<p>À partir de 80€</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="contact">
+<section id="reservation">
 
-    <h2 class="title">CONTACT</h2>
+<h2 class="title">RÉSERVATION</h2>
 
-    <p>📍 Villefranche-sur-Saône</p>
-    <p>📞 06 87 99 34 86</p>
-    <p>📧 rapid.automobile69@gmail.com</p>
-    <p>🕒 Disponible 7J/7 — 8H à 20H</p>
+<form>
 
-    <a class="btn" href="https://rapid-auto-mobile.vercel.app/">
-      Voir le site
-    </a>
+<input type="text" placeholder="Nom complet">
 
-  </div>
+<input type="tel" placeholder="Téléphone">
+
+<select>
+<option>Choisir une prestation</option>
+<option>Vidange</option>
+<option>Diagnostic</option>
+<option>Plaquettes</option>
+<option>Nettoyage</option>
+</select>
+
+<input type="date">
+
+<textarea placeholder="Expliquez votre besoin"></textarea>
+
+<button class="btn">
+Confirmer la réservation
+</button>
+
+</form>
+
+</section>
+
+<section id="devis">
+
+<h2 class="title">DEMANDE DE DEVIS</h2>
+
+<form>
+
+<input type="text" placeholder="Nom">
+
+<input type="email" placeholder="Email">
+
+<input type="text" placeholder="Marque du véhicule">
+
+<textarea placeholder="Description du problème"></textarea>
+
+<button class="btn">
+Envoyer le devis
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2 class="title">GALERIE</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200">
+
+</div>
+
+</section>
+
+<section id="avis">
+
+<h2 class="title">AVIS CLIENTS</h2>
+
+<div class="grid">
+
+<div class="review">
+<strong>⭐⭐⭐⭐⭐ Lucas</strong>
+<p>Service ultra rapide et professionnel.</p>
+</div>
+
+<div class="review">
+<strong>⭐⭐⭐⭐⭐ Sarah</strong>
+<p>Très pratique à domicile, je recommande.</p>
+</div>
+
+<div class="review">
+<strong>⭐⭐⭐⭐⭐ Mehdi</strong>
+<p>Travail propre et prix corrects.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">ZONE D’INTERVENTION</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=Villefranche-sur-Saone&t=&z=11&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</section>
+
+<section id="contact">
+
+<div class="contact">
+
+<h2 class="title">CONTACT</h2>
+
+<p>📞 06 87 99 34 86</p>
+<p>📧 rapid.automobile69@gmail.com</p>
+<p>📍 Villefranche-sur-Saône</p>
+<p>🕒 Disponible 7J/7 — 8H à 20H</p>
+
+<br>
+
+<a class="btn" href="tel:0687993486">
+Appeler maintenant
+</a>
+
+</div>
+
 </section>
 
 <footer>
-  © 2025 Rapid’Auto Mobile — Tous droits réservés
+© 2025 Rapid’Auto Mobile — Tous droits réservés
 </footer>
+
+<a class="whatsapp" href="https://wa.me/33687993486">
+💬
+</a>
 
 </body>
 </html>
