@@ -21,9 +21,35 @@ color:white;
 overflow-x:hidden;
 }
 
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#000;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:20px;
+z-index:999;
+border-bottom:1px solid #222;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+font-size:14px;
+}
+
+nav a:hover{
+color:#ffb800;
+}
+
 header{
 min-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
 url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600');
 background-size:cover;
 background-position:center;
@@ -72,6 +98,8 @@ font-weight:bold;
 border-radius:15px;
 margin:10px;
 transition:0.3s;
+border:none;
+cursor:pointer;
 }
 
 .btn:hover{
@@ -195,28 +223,27 @@ box-shadow:0 0 20px rgba(0,0,0,0.5);
 z-index:999;
 }
 
-nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:#000;
+.banner{
+background:#ffb800;
+color:black;
 padding:15px;
-display:flex;
-justify-content:center;
-gap:20px;
-z-index:999;
-border-bottom:1px solid #222;
-}
-
-nav a{
-color:white;
-text-decoration:none;
+text-align:center;
 font-weight:bold;
+font-size:18px;
 }
 
-nav a:hover{
-color:#ffb800;
+.small{
+color:#aaa;
+font-size:14px;
+margin-top:10px;
+}
+
+ul{
+padding-left:20px;
+}
+
+li{
+margin-bottom:10px;
 }
 
 </style>
@@ -241,20 +268,73 @@ color:#ffb800;
 
 <p>
 Le garage vient à vous 🚗<br>
-Entretien & réparation automobile à domicile
+Entretien • Diagnostic • Réparations à domicile
 </p>
 
+<div class="banner">
+⏱️ Intervention en moins d’1H maximum selon disponibilité
+</div>
+
+<br>
+
 <a class="btn" href="tel:0687993486">
-📞 Appeler
+📞 Appeler maintenant
 </a>
 
 <a class="btn" href="https://wa.me/33687993486">
-WhatsApp
+💬 WhatsApp
 </a>
 
 </div>
 
 </header>
+
+<section>
+
+<div class="grid">
+
+<div class="card">
+<h3>📍 Zone d’intervention</h3>
+<p>
+Villefranche-sur-Saône et alentours jusqu’à 20 km.
+</p>
+
+<p class="small">
+Frais déplacement : 0,80€/km supplémentaires.
+</p>
+</div>
+
+<div class="card">
+<h3>🛡️ Travail soigné</h3>
+<p>
+Soin du détail et finitions propres.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Respect du véhicule</h3>
+<p>
+Votre voiture entre de bonnes mains.
+</p>
+</div>
+
+<div class="card">
+<h3>✅ Respect des normes</h3>
+<p>
+Méthodes conformes aux normes en vigueur.
+</p>
+</div>
+
+<div class="card">
+<h3>🔒 Sécurité avant tout</h3>
+<p>
+Interventions réalisées en toute sécurité.
+</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="services">
 
@@ -263,33 +343,48 @@ WhatsApp
 <div class="grid">
 
 <div class="card">
+<h3>🧼 Nettoyage intérieur</h3>
+<p>Nettoyage professionnel complet.</p>
+</div>
+
+<div class="card">
 <h3>🔧 Vidange</h3>
-<p>Vidange complète huile + filtre à domicile.</p>
+<p>Huile + filtre huile.</p>
 </div>
 
 <div class="card">
-<h3>💻 Diagnostic</h3>
-<p>Passage valise diagnostic électronique.</p>
-</div>
-
-<div class="card">
-<h3>🛞 Plaquettes frein</h3>
+<h3>🛞 Plaquettes de frein</h3>
 <p>Remplacement rapide et sécurisé.</p>
 </div>
 
 <div class="card">
-<h3>🧼 Nettoyage intérieur</h3>
-<p>Nettoyage professionnel du véhicule.</p>
+<h3>⚙️ Entretien de base</h3>
+<p>Contrôles et vérifications.</p>
 </div>
 
 <div class="card">
-<h3>⚙️ Entretien général</h3>
-<p>Entretien complet et contrôles sécurité.</p>
+<h3>💧 Appoint liquides</h3>
+<p>Huile, liquide frein, lave-glace, etc.</p>
 </div>
 
 <div class="card">
-<h3>🚗 Déplacement rapide</h3>
-<p>Villefranche et alentours jusqu’à 20 km.</p>
+<h3>🚘 Essuie-glaces</h3>
+<p>Changement rapide.</p>
+</div>
+
+<div class="card">
+<h3>🧰 Remplacement filtres</h3>
+<p>Huile, air, habitacle, carburant.</p>
+</div>
+
+<div class="card">
+<h3>💻 Passage valise</h3>
+<p>Diagnostic en cas de voyant moteur.</p>
+</div>
+
+<div class="card">
+<h3>🔎 Diagnostic mécanique</h3>
+<p>Diagnostic mécanique et électronique.</p>
 </div>
 
 </div>
@@ -298,26 +393,63 @@ WhatsApp
 
 <section id="tarifs">
 
-<h2 class="title">TARIFS</h2>
+<h2 class="title">TARIFS CONSEILLÉS</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Vidange</h3>
-<p>À partir de 45€</p>
+<h3>🧼 Nettoyage intérieur</h3>
+<p>60€</p>
 </div>
 
 <div class="card">
-<h3>Diagnostic</h3>
-<p>À partir de 50€</p>
+<h3>🔧 Vidange</h3>
+<p>45€</p>
+<p class="small">
+Huile 5W30 ou 10W40 jusqu’à 5L.
+</p>
 </div>
 
 <div class="card">
-<h3>Plaquettes</h3>
+<h3>🛞 Plaquettes frein</h3>
 <p>À partir de 80€</p>
 </div>
 
+<div class="card">
+<h3>⚙️ Entretien base</h3>
+<p>50€</p>
 </div>
+
+<div class="card">
+<h3>💧 Appoint liquides</h3>
+<p>15€</p>
+</div>
+
+<div class="card">
+<h3>🚘 Essuie-glaces</h3>
+<p>À partir de 20€</p>
+</div>
+
+<div class="card">
+<h3>🧰 Filtres</h3>
+<p>À partir de 25€</p>
+</div>
+
+<div class="card">
+<h3>💻 Passage valise</h3>
+<p>20€</p>
+</div>
+
+<div class="card">
+<h3>🔎 Diagnostic</h3>
+<p>50€</p>
+</div>
+
+</div>
+
+<p class="small" style="text-align:center;margin-top:30px;">
+* Prix indiqués sans pièces comprises. Tarifs variables selon véhicule.
+</p>
 
 </section>
 
@@ -337,6 +469,7 @@ WhatsApp
 <option>Diagnostic</option>
 <option>Plaquettes</option>
 <option>Nettoyage</option>
+<option>Entretien</option>
 </select>
 
 <input type="date">
@@ -353,7 +486,7 @@ Confirmer la réservation
 
 <section id="devis">
 
-<h2 class="title">DEMANDE DE DEVIS</h2>
+<h2 class="title">PRÉ-DEVIS GRATUIT</h2>
 
 <form>
 
@@ -370,6 +503,65 @@ Envoyer le devis
 </button>
 
 </form>
+
+<p class="small" style="text-align:center;">
+Réponse rapide par SMS, mail ou WhatsApp.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="title">SATISFAIT OU REMBOURSÉ*</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Valable uniquement sur la prestation réalisée.</li>
+
+<li>Demande sous 48H suivant l’intervention.</li>
+
+<li>Remboursement hors frais déplacement.</li>
+
+<li>Pas valable en cas mauvaise utilisation véhicule.</li>
+
+<li>En cas de défaut avéré, nouvelle intervention ou remboursement.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">PIÈCES & FACTURATION</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🧾 Transparence</h3>
+<p>
+Les pièces, main-d’œuvre et déplacement sont facturés séparément.
+</p>
+</div>
+
+<div class="card">
+<h3>📦 Fourniture pièces</h3>
+<p>
+Possibilité de fournir vos propres pièces.
+</p>
+</div>
+
+<div class="card">
+<h3>💳 Acompte avant achat</h3>
+<p>
+Un acompte peut être demandé avant achat pièces.
+</p>
+</div>
+
+</div>
 
 </section>
 
@@ -439,6 +631,10 @@ src="https://maps.google.com/maps?q=Villefranche-sur-Saone&t=&z=11&ie=UTF8&iwloc
 
 <a class="btn" href="tel:0687993486">
 Appeler maintenant
+</a>
+
+<a class="btn" href="https://wa.me/33687993486">
+WhatsApp
 </a>
 
 </div>
