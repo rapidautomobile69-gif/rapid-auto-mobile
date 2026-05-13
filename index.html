@@ -1,11 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>Rapid Auto Mobile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rapid’Auto Mobile</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#050505;
+      color:white;
+    }
+
+    header{
+      background:linear-gradient(135deg,#000,#111);
+      padding:60px 20px;
+      text-align:center;
+      border-bottom:2px solid #ffb800;
+    }
+
+    header h1{
+      font-size:55px;
+      color:#ffb800;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:22px;
+      color:#ddd;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 30px;
+      background:#ffb800;
+      color:black;
+      text-decoration:none;
+      border-radius:12px;
+      font-weight:bold;
+      margin:10px;
+    }
+
+    .section{
+      padding:50px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .title{
+      font-size:38px;
+      color:#ffb800;
+      margin-bottom:30px;
+      text-align:center;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:#111;
+      border:1px solid #222;
+      border-radius:20px;
+      padding:25px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      border-color:#ffb800;
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      color:#ffb800;
+      margin-bottom:15px;
+    }
+
+    .contact{
+      background:#111;
+      border-radius:20px;
+      padding:30px;
+      text-align:center;
+    }
+
+    .contact p{
+      margin:10px 0;
+      font-size:18px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      border-top:1px solid #222;
+      color:#999;
+      margin-top:50px;
+    }
+  </style>
 </head>
-<body style="background:black;color:white;text-align:center;font-family:Arial;padding-top:100px;">
+
+<body>
+
+<header>
   <h1>RAPID’AUTO MOBILE</h1>
-  <p>Le garage vient à vous !</p>
-  <h2>Site en construction 🚗</h2>
+  <p>Le garage vient à vous 🚗</p>
+
+  <a class="btn" href="tel:0687993486">📞 Appeler</a>
+
+  <a class="btn" href="https://wa.me/33687993486">
+    WhatsApp
+  </a>
+</header>
+
+<section class="section">
+  <h2 class="title">NOS PRESTATIONS</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>🔧 Vidange</h3>
+      <p>Vidange huile + filtre directement à domicile.</p>
+    </div>
+
+    <div class="card">
+      <h3>🛞 Plaquettes de frein</h3>
+      <p>Remplacement rapide et sécurisé.</p>
+    </div>
+
+    <div class="card">
+      <h3>💻 Diagnostic électronique</h3>
+      <p>Passage valise et diagnostic complet.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧼 Nettoyage intérieur</h3>
+      <p>Nettoyage professionnel du véhicule.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Entretien général</h3>
+      <p>Contrôles et entretien automobile.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚗 Déplacement rapide</h3>
+      <p>Intervention à Villefranche et alentours.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="title">TARIFS</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <h3>Vidange</h3>
+      <p>À partir de 45€</p>
+    </div>
+
+    <div class="card">
+      <h3>Diagnostic</h3>
+      <p>À partir de 50€</p>
+    </div>
+
+    <div class="card">
+      <h3>Plaquettes frein</h3>
+      <p>À partir de 80€</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="contact">
+
+    <h2 class="title">CONTACT</h2>
+
+    <p>📍 Villefranche-sur-Saône</p>
+    <p>📞 06 87 99 34 86</p>
+    <p>📧 rapid.automobile69@gmail.com</p>
+    <p>🕒 Disponible 7J/7 — 8H à 20H</p>
+
+    <a class="btn" href="https://rapid-auto-mobile.vercel.app/">
+      Voir le site
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 Rapid’Auto Mobile — Tous droits réservés
+</footer>
+
 </body>
 </html>
