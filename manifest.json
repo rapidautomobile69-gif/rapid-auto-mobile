@@ -1,0 +1,16 @@
+{
+  "name": "Rapid'Auto Mobile",
+  "short_name": "RapidAuto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#ffb800",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
