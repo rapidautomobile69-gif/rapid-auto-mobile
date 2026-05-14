@@ -133,6 +133,10 @@ padding:30px;
 border-radius:25px;
 border:1px solid #222;
 transition:0.3s;
+
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
 }
 
 .card:hover{
@@ -329,6 +333,32 @@ Frais déplacement : 0,80€/km supplémentaires.
 
 </section>
 
+<div class="grid">
+
+<div class="card">
+<h3>🚗 +150 interventions</h3>
+<p>
+Clients satisfaits dans la région.
+</p>
+</div>
+
+<div class="card">
+<h3>⭐ 5 étoiles</h3>
+<p>
+Service rapide et professionnel.
+</p>
+</div>
+
+<div class="card">
+<h3>⚡ Disponible 7J/7</h3>
+<p>
+Intervention rapide à domicile.
+</p>
+</div>
+
+</div>
+
+</section>
 <section id="services">
 
 <h2 class="title">NOS PRESTATIONS</h2>
@@ -511,6 +541,29 @@ WhatsApp
 <a class="whatsapp" href="https://wa.me/33687993486">
 💬
 </a>
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})" id="topBtn">
+⬆
+</button>
 
+<style>
+
+#topBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#ffb800;
+color:black;
+border:none;
+width:50px;
+height:50px;
+border-radius:50%;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+z-index:999;
+box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+</style>
 </body>
 </html>
